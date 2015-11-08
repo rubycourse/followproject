@@ -55,7 +55,7 @@ test.json
 ["targetusername"]
 ```
 
-When you input the parameters. phantomjs will login to github. Then it goes to the targetusername's follower page and follows everyone there.
+When you input the parameters. phantomjs will login to github. Then it goes through every string in test.json's follower page and follows everyone there. In this example,targetusername's followers will be followed. At the end of the script, it will save the followed usernames in tmptest.json.
 
 
 
