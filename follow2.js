@@ -17,7 +17,7 @@ var userarray = [];
 //New users collected
 var newuserarray = [];
 //stall time to get users
-var stalltime = 2000;
+var stalltime = 2500;
 
 //Print name
 function printstart()
@@ -164,8 +164,17 @@ function innerloop()
 		return;
 	}
 	
-	casper.echo("https://github.com/"+target+"/followers?page="+pagenum.toString());
-	casper.thenOpen(("https://github.com/"+target+"/followers?page="+pagenum.toString()) , evalfollow);	
+	if (target.indexOf("/") === -1)
+	{
+		casper.echo("https://github.com/"+target+"/followers?page="+pagenum.toString());
+		casper.thenOpen(("https://github.com/"+target+"/followers?page="+pagenum.toString()) , evalfollow);
+	}
+	else
+	{
+		casper.echo("https://github.com/"+target+"/stargazers?page="+pagenum.toString());
+		casper.thenOpen(("https://github.com/"+target+"/stargazers?page="+pagenum.toString()) , evalfollow);	
+	}
+
 	return;
 }
 
