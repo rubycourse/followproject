@@ -47,15 +47,15 @@ You shouldn't use this....
 
 Use at own risk
 ```
-phantomjs follow.js yourusername yourpassword test.json
+casperjs follow2.js yourusername yourpassword test.json
 ```
 
 test.json
 ```javascript
-["targetusername"]
+["targetusername","targetusername/repositoryname"]
 ```
 
-When you input the parameters. phantomjs will login to github. Then it goes through every string in test.json's follower page and follows everyone there. In this example,targetusername's followers will be followed. At the end of the script, it will save the followed usernames in tmptest.json.
+When you input the parameters. phantomjs will login to github. Then it goes through every string in test.json's follower page and follows everyone there. In this example,targetusername's followers will be followed. Also, it will follow users in repositories at targetusername/repositoryname. At the end of the script, it will save the followed usernames in tmptest.json.
 
 
 
