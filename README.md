@@ -46,6 +46,9 @@ You shouldn't use this....
 
 
 Use at own risk
+
+Tested on casperjs 1.1 and phantomjs 2.0
+
 ```
 casperjs follow2.js yourusername yourpassword test.json
 ```
