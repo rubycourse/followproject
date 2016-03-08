@@ -64,7 +64,7 @@ function setupnext(max)
 				c++;
 				//usertarget = temparr[c];
 				pgc = 1;
-				nexturl = mainurl+username+'/followers?page='+pgc.toString();
+				nexturl = mainurl+username+'/following?page='+pgc.toString();
 				setTimeout(function(){ load(nexturl) }, 3000);
 				return 1;
 	}
@@ -144,7 +144,7 @@ page.onLoadFinished = function() {
 			if (max === 51)
 			{
 				//pgc++;
-				nexturl = mainurl+usertarget+'/followers?page='+pgc.toString();
+				nexturl = mainurl+usertarget+'/following?page='+pgc.toString();
 				setTimeout(function(){ load(nexturl) }, 2000);
 			}
 			else
